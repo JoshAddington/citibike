@@ -1,0 +1,8 @@
+# Database
+db.sqlite3
+
+# collectstatic files
+www/static/*
+
+# python compiled
+*.pyc
