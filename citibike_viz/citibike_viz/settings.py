@@ -94,9 +94,18 @@ WSGI_APPLICATION = 'citibike_viz.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+    #
+    # 'postgres': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': os.environ['DB_NAME'],
+    #     'USER': os.environ['DB_USER'],
+    #     'PASSWORD': os.environ['DB_PASSWORD'],
+    #     'HOST': os.environ['DB_HOST'],
+    #     'PORT': os.environ['DB_PORT'],
+    # }
 }
 
 
@@ -125,10 +134,10 @@ STATICFILES_DIRS = (
 )
 
 # RabbitMQ settings
-BROKER_URL = "amqp://%s:%s@localhost:5672/%s" % (
-    os.environ['RABBITMQ_USER'],
-    os.environ['RABBITMQ_PASSWORD'],
-    os.environ['RABBITMQ_VHOST'])
+# BROKER_URL = "amqp://%s:%s@localhost:5672/%s" % (
+#     os.environ['RABBITMQ_USER'],
+#     os.environ['RABBITMQ_PASSWORD'],
+#     os.environ['RABBITMQ_VHOST'])
 
 # Celery Settings
 CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
