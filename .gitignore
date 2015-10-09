@@ -1,0 +1,6 @@
+*.pyc
+celerybeat.pid
+
+
+# collectstatic files
+www/static/*
