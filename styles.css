@@ -1,0 +1,382 @@
+/*LAYOUT*/
+#container { 
+  width: 960px; 
+  margin: 0 auto 0 auto; 
+  padding: 20px 0 0 40px; 
+  height: 706px; 
+  z-index: 9999;
+}
+
+.top { 
+  width: 960px;
+}
+
+/*HEADER*/
+#logo svg { 
+  width: 160px;
+}
+#logo_wrap { 
+  width: 960px; margin: -74px auto 0 auto; padding: 0 0 0 40px;
+}
+
+#logo {
+  /*background-color: black; */
+  width: 100%;
+  z-index: -9999; 
+  position: relative;
+}
+
+#black{
+  background-color: black;
+  height: 74px;
+  width: 1021px;
+}
+
+/*FOOTER*/
+footer { 
+  border-top: 1px solid gray; 
+  padding: 30px 0 60px 30px; 
+  background-color: white;
+  position: relative;
+}
+
+footer .wrap { 
+  max-width: 960px; 
+  margin: 0 auto;
+}
+
+footer .left { 
+  width: 600px; 
+  float: left;
+}
+
+footer .right { 
+  width: 300px; 
+  float: right;
+}
+
+footer img { 
+  width: 100px; 
+  padding-left: 20px;
+}
+
+footer a{
+  color: black;
+}
+
+footer a:visited{
+  color: black;
+}
+
+.sponsor { 
+  text-transform: uppercase; 
+  font-family: "neutra-2-display-1", sans-serif; 
+  font-size: 12px; 
+  font-weight: 800; 
+  color: gray;
+  float: right;
+}
+
+/*TYPE*/
+h1 { 
+  text-transform: uppercase; 
+  font-family: "ny-irvin-1", sans-serif; 
+  font-size: 55px; 
+  margin-bottom: 20px; 
+  margin-top: 6px;
+}
+
+p {
+  line-height: 1.4em; 
+  font-family: "Times New Roman", Times;
+}
+
+.kicker {
+  text-transform: uppercase; 
+  font-family: "neutra-2-display-1", sans-serif; 
+  font-size: 12px; 
+  font-weight: 800; 
+  color: #ed1e37;
+  letter-spacing: 1px;
+}
+
+.credit {
+  font-size: 12px;
+}
+
+a:visited {
+  color: black;
+}
+
+/*COLOR*/
+.red {
+  color: #ed1e37;
+}
+
+#graphic svg { 
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.number {
+  text-anchor: middle;
+  dominant-baseline: central;
+  font-family: Helvetica;
+  fill: white;
+  font-size: 9px;
+  font-weight: bold;
+  opacity: .5;
+}
+
+#current_time{
+  font-family: "neutra-2-text-1", Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  opacity: .9;
+/*  border-bottom: 1px solid #ccc;*/
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.borough_map {
+  fill: #d9e0e5;
+}
+
+#slider-wrap{
+  font-family: "neutra-2-display-1";
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: .15em;
+  padding: 10px 0 3px 0;
+  margin-bottom: 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#slider {
+  margin: 10px 0 15px 0;
+  width: 475px;
+  border-bottom: 2px solid #b9bfc3;
+}
+
+p { 
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.credit { 
+  font-size: 12px;
+}
+
+.description { 
+  margin-bottom: 20px;
+  width: 475px;
+}
+
+#wrap {
+  position: relative;
+  z-index: 9998;
+  width: 475px;
+}
+
+.neighborhood {
+  text-anchor: middle;
+  font-family: "neutra-2-text-1", Helvetica, sans-serif;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: .8;
+}
+
+.ab:hover {
+  cursor: pointer;
+}
+
+#tooltip {
+  position: absolute;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  /*text-align: center;*/
+  opacity: 0;
+}
+
+#tooltip.hidden {
+  display: none;
+  -moz-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.bike {
+  font-family: "neutra-2-text-1", helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#a-bikes {
+  font-family: "neutra-2-text-1", helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: #3c3c3c;
+  padding-right: 7px;
+}
+
+#name {
+  font-family: "neutra-2-text-1", helvetica, sans-serif;
+  font-weight: bold; 
+  font-size: 18px; 
+  border-bottom: 1px solid gray;
+  padding-bottom: 4px;
+}
+
+#spinner
+{
+    padding-top: 300px;
+    width:100%;
+    height:100%;
+    position: fixed;
+    background:url("../images/spinner.gif") no-repeat center #fff;
+    text-align:center;
+    font:normal 22px "neutra-2-display-1", helvetica, sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index:9999;
+    overflow: auto;
+
+    -moz-transition: all 0.15s;
+    -o-transition: all 0.15s;
+    -webkit-transition: all 0.15s;
+    transition: all 0.15s;
+}
+
+button
+{
+  padding: 5px 10px 5px 10px;
+  background-color: #d9e0e5;
+  border: 0px;
+  cursor: pointer;
+  font-family: "neutra-2-display-1";
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: .15em;
+  border-bottom: 3px solid #ccc;
+     -moz-transition: all 0.15s;
+       -o-transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+          border-radius: 2px;
+     -moz-border-radius: 2px;
+       -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  transition: all 0.15s;
+}
+
+input[type="radio"]{
+  font-family: "neutra-2-display-1";
+  margin-right: 5px;
+  margin-left: 10px;
+
+}
+
+button:hover
+{
+  background-color: #555;
+  color: white;
+  border-bottom: 3px solid #222;
+}
+
+.ui-slider {
+  background: #d9e0e5;
+  border-radius: 32px;
+  height: 12px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  filter: unquote("progid:DXImageTransform.Microsoft.gradient(enabled = false)");
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.ui-slider-handle {
+  background-color: #ed1e37 !important;
+  border-radius: 50%;
+  cursor: pointer !important;
+  -webkit-backface-visibility: hidden;
+  border: 2px solid white !important;
+}
+
+.ui-slider-handle:hover {
+  background: #3c3c3c !important;
+}
+
+.date-wrap p {
+  font-family: "neutra-2-text-1", sans-serf;
+}
+
+.kicker-wrap {
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #9ba1a5;
+  font-family: "neutra-2-display-1", sans-serf;
+  letter-spacing: 1px;
+}
+
+#trips, #weather, #hi, #lo, #precip, .deg{
+  font-family: "neutra-2-text-1", sans-serf;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: .8;
+}
+
+.trip-wrap {
+  width: 135px;
+  float: left;
+  margin-bottom: 70px;
+}
+
+.weather-wrap p {
+  float: left;
+  margin-right: 20px;
+}
+
+.weather-top {
+  width: 320px;
+  margin-bottom: 10px;
+}
+
+.description a {
+  color: black;
+}
+.description a:visited {
+  color: black;
+}
+
+
+/*.description p::nth-last-letter {
+  color: red;
+}*/
+
+.bold {
+  font-weight: bold;
+}
+
+#current_time span {
+  font-variant: small-caps;
+}
+
+
+
+
+
+

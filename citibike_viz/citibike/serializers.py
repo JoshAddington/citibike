@@ -36,8 +36,8 @@ class StationBikeSerializer(serializers.ModelSerializer):
     def station_bike_update(self, obj):
         bikes = Bike.objects.filter(station=obj).order_by('update')
         updates = bikes.values_list('created_at', flat=True)
-        update_list = [update.strftime("%A, %B %d, %Y %I:%M %p") for update in updates]
-        return update_list
+        # update_list = [update.strftime("%A, %B %d, %Y %I:%M %p") for update in updates]
+        return updates
 
 
 class StationMapSerializer(serializers.ModelSerializer):

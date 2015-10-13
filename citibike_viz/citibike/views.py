@@ -23,11 +23,18 @@ def boroughs(request):
             )
         )
 
+def api_json(request):
+    return JsonResponse(
+        json.loads(open(
+            os.path.join(settings.STATIC_ROOT, 'api.json')).read()
+            )
+        )
+
 
 @api_view(['GET'])
 def citibike_map(request):
     if request.method == 'GET':
-        stations = Station.objects.all().prefetch_related(Prefetch('bikes', queryset=Bike.objects.order_by('update')))
+        stations = Station.objects.all().prefetch_related()
         station_serializer = StationMapSerializer(stations, many=True)
         updates = UpdateTime.objects.values_list('datetime', flat=True)
         return Response({'stations': station_serializer.data,

@@ -46,13 +46,14 @@ DEFAULT_APPS = (
 )
 
 CUSTOM_APPS = (
-    'api',
+    'citibike',
 )
 
 THIRD_PARTY_APPS = (
     'djcelery',
     'kombu.transport.django',
     'rest_framework',
+    'debug_toolbar',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
@@ -94,19 +95,22 @@ WSGI_APPLICATION = 'citibike_viz.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    #
-    # 'postgres': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': os.environ['DB_NAME'],
-    #     'USER': os.environ['DB_USER'],
-    #     'PASSWORD': os.environ['DB_PASSWORD'],
-    #     'HOST': os.environ['DB_HOST'],
-    #     'PORT': os.environ['DB_PORT'],
-    # }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ['RDS_DB_NAME'],
+        'USER': os.environ['RDS_USERNAME'],
+        'PASSWORD': os.environ['RDS_PASSWORD'],
+        'HOST': os.environ['RDS_HOSTNAME'],
+        'PORT': os.environ['RDS_PORT'],
+    }
 }
+
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -129,7 +133,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'api', 'static'),
+    os.path.join(BASE_DIR, 'citibike', 'static'),
 )
 
 # RabbitMQ settings
